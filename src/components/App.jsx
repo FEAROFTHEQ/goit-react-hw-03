@@ -46,7 +46,7 @@ const visibleContacts = contacts.filter((contact)=> contact.name.toLowerCase().i
 
   return (
 <div>
-  <h1>Phonebook</h1>
+  <h1 className='title'>Phonebook</h1>
   <ContactForm onAdd={addContact} />
   <SearchBox value={filter} onFilter={setFilter} />
   <ContactList contacts = {visibleContacts} onDelete={deleteContact}/>

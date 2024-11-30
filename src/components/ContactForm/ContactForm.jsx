@@ -28,14 +28,14 @@ const ContactForm = ({ onAdd }) => {
           name:'',
           number:''
         }} onSubmit={handleSubmit} validationSchema={ContactSchema}>
-        <Form>
-        <label htmlFor={nameFieldId}>Name</label>
+        <Form className={s.form}>
+        <label htmlFor={nameFieldId} className={s.text}>Name</label>
         <Field type="text" name="name" />
-        <ErrorMessage name="name" component="span" />
-        <label htmlFor={numberFieldId}>Number</label>
+        <ErrorMessage name="name" component="span" className={s.error}/>
+        <label htmlFor={numberFieldId} className={s.text}>Number</label>
 				<Field type="number" name="number" />
-        <ErrorMessage name="number" component="span" />
-        <button type="submit">Add contact</button>
+        <ErrorMessage name="number" component="span" className={s.error} />
+        <button type="submit" className={s.btn}>Add contact</button>
         </Form>
         </Formik>
     </div>

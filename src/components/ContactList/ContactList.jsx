@@ -3,7 +3,7 @@ import s from './ContactList.module.css'
 
 const ContactList = ({contacts, onDelete}) => {
   return (
-    <ul>
+    <ul className={s.container}>
         {contacts.map(contact =><li key={contact.id}><Contact contact ={contact} onDelete={onDelete} /></li> )}
     </ul>
   )
