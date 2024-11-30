@@ -2,12 +2,12 @@ import s from './Contact.module.css'
 import { MdPersonOutline } from "react-icons/md";
 import { MdOutlinePhone } from "react-icons/md";
 
-const Contact = ({contact}) => {
+const Contact = ({contact, onDelete}) => {
   return (
     <>
     <p><MdPersonOutline />{contact.name}</p>
     <p><MdOutlinePhone /> {contact.number}</p>
-    <button>Delete</button>
+    <button onClick={()=> onDelete(contact.id)}>Delete</button>
     </>
   )
 }
